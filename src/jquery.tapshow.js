@@ -37,10 +37,10 @@
                     }, 200);
                     setTimeout(function() {
                         var height = $(vd.closest('div')).height() + 300;
-                        if (height > 850)
+                        if (height > opts.heightTreshold)
                             $(opts.container).css({
                                 "max-height": height + "px",
-                                "height": height + "px"
+                                "height": "auto"
                             });
                         else
                             $(opts.container).css({
@@ -98,6 +98,7 @@
         fadeTime: 500, // milliseconds - fade duration for each box
         defaultHeight: 0, // pixel - default height before extend
         extendHeight: 0, // pixel - height to be extend
+        heightTreshold: 0, // pixel - min. height treshold in order to extend the layout
         setClass: "", // set class after before width extend
         restoreClass: "", // class to be restored after shrinking
         cardClass: "", // card class (for CSS Styling)
