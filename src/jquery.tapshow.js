@@ -1,5 +1,5 @@
 /**
- * tapShow 0.0.1
+ * tapShow 0.0.2
  * https://github.com/DxEDesign/tapShow.js
  * @license MIT licensed
  *
@@ -14,7 +14,7 @@
             $(key1).click(function() {
                 var vd = $(this);
                 if (vd.hasClass('unbinded')) return;
-                runScrollTo(vd);
+                runScrollTo(opts.array[0]);    // always set on the first element, this solve the scroll to issue in mobile
                 vd.parent().closest('div').removeAttr('style');
                 opts.array.forEach(function(key2) {
                     if (key1 !== key2)
@@ -53,7 +53,7 @@
                         setupVD(vd, opts.restoreClass, opts.stretchTime, key1.substr(1));
                         vd.children(opts.cardClass).css({
                             "width": "auto",
-                            "height": "260px"
+                            "height": "auto"
                         });
                         $(opts.container).css({
                             "max-height": opts.defaultHeight + "px"
