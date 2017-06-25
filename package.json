@@ -1,29 +1,36 @@
 {
   "name": "tapshow.js",
-  "version": "0.0.1",
-  "description": "A simple tap and show product description inside a box",
-  "main": "dist/jquery.tapshow.js",
+  "version": "1.0.0",
+  "description": "A simple tap and show the content within a box",
+  "main": "dist/tapshow.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DxEDesign/tapShow.js.git"
   },
   "keywords": [
-    "jquery",
-    "tapShow",
-    "tapShow.js"
+    "tapshow",
+    "tapshowjs",
+    "modularize",
+    "information",
+    "boxes",
+    "blocks",
+    "javascipt",
+    "expand",
+    "collapse"
   ],
   "author": "DxE Design",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DxEDesign/tapShow.js/issues"
   },
-  "homepage": "https://github.com/DxEDesign/tapShow.js#readme",
+  "homepage": "https://github.com/DxEDesign/tapShow.js",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.1.2"
+    "gulp-uglify": "^3.0.0",
+    "uglify-es": "^3.0.19"
   }
 }
