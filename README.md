@@ -1,5 +1,5 @@
 # tapShow.js
-
+![tapShow.js Demo Animation](http://dxe-design.com/tapShow.js/img/tapShow-demo.gif)
 
 ## Introduction
 tapShow.js is a javascript plugin that allows a user to click / (tap) the box, then it will expand and show the full details about that particular block. This plugin is very handy for those who want to "modularize their information into blocks". At this moment, all blocks are arranged in horizontal form.
@@ -9,7 +9,7 @@ tapShow.js container and blocks layout are developed using CSS3 Flexbox. Thus, t
 
 ## Structure
 The structure of tapShow.js consists of `Container`, `Block(s)`, `Outer-Content` and `Inner-Content`:
-
+![tapShow.js Structure](http://dxe-design.com/tapShow.js/img/structure_tapshow_js.png)
 
 - Container: is the home layout that holds all block(s) together. It is built with CSS3 flexbox. Thus it can give flexible arrangement to the block(s) that reside within.
 - Block(s): a box that holds two side of information. First side is called Outer-Content and the other, Inner-Content.
@@ -67,7 +67,7 @@ tapShow({
 That's it! Then the above method will give you the default layout of tapShow.js block.
 
 ## Documentation
-To understand more deeply about all functionalities of tapShow.js, please read the [documentation]().
+To understand more deeply about all functionalities of tapShow.js, please read the [documentation](http://dxe-design.com/tapShow.js/docs).
 
 ## License
 The License for tapShow.js is under (MIT License):

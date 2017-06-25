@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/DxEDesign/tapShow.js/issues"
   },
-  "homepage": "https://github.com/DxEDesign/tapShow.js",
+  "homepage": "http://dxe-design.com/tapShow.js",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
