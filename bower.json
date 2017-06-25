@@ -1,0 +1,28 @@
+{
+  "name": "tapshow.js",
+  "description": "A simple tap and show the content within a box",
+  "main": "dist/tapshow.js",
+  "authors": [
+    "DxE Design"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tapshow",
+    "tapshowjs",
+    "modularize",
+    "information",
+    "boxes",
+    "blocks",
+    "javascipt",
+    "expand",
+    "collapse"
+  ],
+  "homepage": "http://dxe-design.com/tapShow.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
