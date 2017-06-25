@@ -1,5 +1,7 @@
 # tapShow.js
-![tapShow.js Demo Animation](http://dxe-design.com/tapShow.js/img/tapShow-demo.gif)
+<p align="center">
+<img src="http://dxe-design.com/tapShow.js/img/tapShow-demo.gif" alt="tapShow.js Demo Animation" />
+</p>
 
 ## Introduction
 tapShow.js is a javascript plugin that allows a user to click / (tap) the box, then it will expand and show the full details about that particular block. This plugin is very handy for those who want to "modularize their information into blocks". At this moment, all blocks are arranged in horizontal form.
