@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tapShow.js - API</title>
+    <meta name="description" content='tapShow.js Documentation - API'>
+    <meta name="keywords" content="tapShow, tapshowjs, modularize information, boxes, blocks, javascipt, expand, collapse, documentation">
+
+    <!-- Open Graph Markup -->
+    <meta property="og:site_name" content="tapShow.js API">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="tapShow.js API">
+    <meta property="og:description" content='tapShow.js Documentation - API'>
+    <meta property="og:url" content="http://dxe-design.com/tapshow/docs/api">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
+    <link rel="stylesheet" href="../../css/docs.css" />
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-101643243-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content" id="api">
+            <a href="https://github.com/DxEDesign/tapShow.js">
+              <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+            </a>
+
+            <div class="section">
+                <h1 class="title">
+                    API
+                </h1>
+
+
+
+                <h2 class="section-title" id="options">
+                    Options
+                </h2>
+                <hr class="line1" />
+                <p class="paragraph">
+                    This list includes all the options for tapShow.js.
+                </p>
+                <div class="spacer-20"></div>
+
+
+
+                <h3 class="sub-title">
+                    # target
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">null</span>
+                    <br> Description: Target option is to appoint which `container` to be initialized with tapShow.js plugin. It accepts <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS Selector</a> as its input.
+                </p>
+                <div class="code-block">
+                    <pre>
+                      <code class="JavaScript">
+    tapShow({
+        target: '.tpContainer'
+    });
+                      </code>
+                  </pre>
+                </div>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title highlight">
+                    Properties Options for Container
+                </h3>
+                <h3 class="sub-title">
+                    # containerWidth
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'100%'</span>
+                    <br> Description: Define the width of container that holds all blocks. It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # direction
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'horizontal'</span>
+                    <br> Accept Values: <span class="snippet">'horizontal' or 'vertical'</span>
+                    <br> Description: This option uses flexbox direction approach. Basically, it helps you to set your block in horizontal arrangement or vertical arrangement.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # blockPosition
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'center'</span>
+                    <br> Accept Values: <span class="snippet">'center', 'top', 'bottom', 'left', or 'right'</span>
+                    <br> Description: This helps you to set your block's position within container.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # textAlign
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'center'</span>
+                    <br> Accept Values: <span class="snippet">'left', 'center' or 'right'</span>
+                    <br> Description: This apply the alignment of overall text in the block. To style individually between the blocks, or the content inside, please use options <a href="#customCSS">customCSS</a> instead.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title highlight">
+                    Properties Options for Block
+                </h3>
+                <h3 class="sub-title">
+                    # blockSelector
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'.block'</span>
+                    <br> Description: Developers can define the selector of the block(s). Be it in a class selector or ID selector.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # outerContentSelector
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'.outer-content'</span>
+                    <br> Description: Developers can define the selector of the outer-content. Be it in a class selector or ID selector.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # innerContentSelector
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'.inner-content'</span>
+                    <br> Description: Developers can define the selector of the inner-content. Be it in a class selector or ID selector.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # displayOne
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">Boolean</span>
+                    <br> Default: <span class="snippet">false</span>
+                    <br> Description: Display one block at a time. If set to true, only one block will remain visible when user click on the block.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # allowCloseBtn
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">Boolean</span>
+                    <br> Default: <span class="snippet">true</span>
+                    <br> Description: To enable the close button on top-right corner of each block.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # animateDuration
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">Number</span>
+                    <br> Default: <span class="snippet">1200</span>
+                    <br> Description: Duration of animation for the block to expand or collapse. Unit is measured in milliseconds (ms).
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # fadeDuration
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">Number</span>
+                    <br> Default: <span class="snippet">250</span>
+                    <br> Description: Duration of fading for the content to become visible or invisible. Unit is measured in milliseconds (ms).
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # expandWidth
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'100%'</span>
+                    <br> Description: Define the width of block during expansion. It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # expandHeight
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'auto'</span>
+                    <br> Description: Define the height of block during expansion. It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # contentAlignH
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'center'</span>
+                    <br> Accept Value: <span class="snippet">'center', 'left' or 'right'</span>
+                    <br> Description: To define the horizontal alignment for content within the block.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # contentAlignV
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'center'</span>
+                    <br> Accept Value: <span class="snippet">'center', 'top' or 'bottom'</span>
+                    <br> Description: To define the vertical alignment for content within the block.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title highlight">
+                    Basic CSS Style Options for Block
+                </h3>
+                <p class="paragraph">
+                    There are few CSS style options available. However, these styling can actually be overwritten in customCSS option. The reason for these few stylings were include originally is to provide simple styling to new users out of the box (example can be seem
+                    in demo page). For advance CSS styling, please use <a href="#customCSS">customCSS</a> instead.
+                </p>
+                <h3 class="sub-title">
+                    # blockWidth
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'250px'</span>
+                    <br> Description: CSS styling for block's width. It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # blockHeight
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'auto'</span>
+                    <br> Description: CSS styling for block's height. It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # blockPadding
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'20px'</span>
+                    <br> Description: CSS styling for block's padding. This applied on four direction (top, bottom, left, right). It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # blockMargin
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'10px'</span>
+                    <br> Description: CSS styling for block's margin. This applied on four direction (top, bottom, left, right). It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # background
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'#fff'</span>
+                    <br> Description: Styling for block's background. It uses CSS background <a href="https://www.w3schools.com/cssref/css3_pr_background.asp" target="_blank">format</a>.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # borderWidth
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'1px'</span>
+                    <br> Description: Styling for block's border width. It supports <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">length unit</a> used in CSS.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="sub-title">
+                    # borderColor
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">String</span>
+                    <br> Default: <span class="snippet">'#000'</span>
+                    <br> Description: Styling for block's border color.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+
+
+
+                <h2 class="section-title" id="events">
+                    Events
+                </h2>
+                <hr class="line1" />
+                <p class="paragraph">
+                    There are few events occured in tapShow's blocks. Developers can insert a callback function in these events.
+                </p>
+                <div class="spacer-20"></div>
+
+                <h3 class="sub-title">
+                    # showStart
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">function</span>
+                    <br> Description: When user click the box, it is the moment the inner-content is about to show.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # showEnd
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">function</span>
+                    <br> Description: When user click the box, it is the moment after the inner-content is shown.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # hideStart
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">function</span>
+                    <br> Description: When user close the box, it is the moment when the inner-content is about to hide.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # hideEnd
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">function</span>
+                    <br> Description: When user close the box, it is the moment after the inner-content is hide.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # blockExpand
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">function</span>
+                    <br> Description: When user click the box, it is the moment when the block expanded.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # blockCollapse
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">function</span>
+                    <br> Description: When user close the box, it is the moment when the block collapsed.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+
+                <h2 class="section-title" id="styling">
+                    Styling
+                </h2>
+                <hr class="line1" />
+                <p class="paragraph">
+                    This is the advance customization for CSS Blocks.
+                </p>
+                <div class="spacer-20"></div>
+
+                <h3 class="sub-title" id="customCSS">
+                    # customCSS
+                </h3>
+                <p class="paragraph coding">
+                    Type: <span class="snippet">Object</span>
+                    <br> Default: <span class="snippet">null</span>
+                    <br> Description: Allow developers to have full control customization for how each blocks appearance.
+                </p>
+                <div class="spacer-40"></div>
+
+
+
+
+                <h2 class="section-title" id="methods">
+                    Methods
+                </h2>
+                <hr class="line1" />
+                <p class="paragraph">
+                    With methods, developers able to control tapShow.js blocks externally. For Example, by incorporating the collapseBlock() method to an external button, user can collapse that particular blocks by click that external button.
+                </p>
+                <div class="spacer-20"></div>
+
+                <h3 class="sub-title">
+                    # build()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Allow developer to build tapShow.js blocks. This is launch initially when tapShow.js plugin is called.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # destroy()
+                </h3>
+                <p class="paragraph coding">
+                    Description: This method destroy the construction of tapShow's blocks.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # rebuild()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Method to reconstruct the blocks.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # alignLeft()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Method to cause all blocks align to left side within container.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # alignCenter()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Method to cause all blocks align center within container.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # alignRight()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Method to cause all blocks align to right side within container.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # expandBlock()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Method to cause block to expand. If no selector is placed within, it will expand all blocks by default. This method accepts <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Selector</a>. If
+                    a specific selector is placed within, it will expand that specific block only.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # collapseBlock()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Method to cause block to collapse. If no selector is placed within, it will collapse all blocks by default. This method accepts <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Selector</a>.
+                    If a specific selector is placed within, it will expand that specific block only.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # addBlock()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Allow developers to add new block externally.
+                </p>
+                <div class="spacer-40"></div>
+
+                <h3 class="sub-title">
+                    # removeBlock()
+                </h3>
+                <p class="paragraph coding">
+                    Description: Allow developers to remove block externally. This method accepts <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Selector</a>. If a specific selector is placed within, it will remove that specific
+                    block only. If no argument is placed within, it will remove the last block by default.
+                </p>
+                <div class="spacer-60"></div>
+
+
+
+
+                <div class="button-navigation">
+                    <div class="prev">
+                        <p class="title">
+                            Previous Page: Getting Started
+                        </p>
+                        <a href="http://dxe-design.com/tapshow/getting-started" class="btn-sign">
+                            &lt; Prev
+                        </a>
+                    </div>
+
+                    <div class="next">
+                        <p class="title">
+                            Next page: Support
+                        </p>
+                        <a href="http://dxe-design.com/tapshow/docs/support" class="btn-sign">
+                            Next &gt;
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="spacer-60"></div>
+            <div class="spacer-20"></div>
+
+
+            <footer class="footer">
+                <p>
+                    Built with &hearts; by <a href="https://github.com/dxedesign" target="_blank">DxE Design</a>
+                </p>
+            </footer>
+        </div>
+
+
+    </div>
+
+    <div class="sidebar">
+        <div class="logo-block">
+            <a href="http://dxe-design.com/tapshow">
+                tapShow.js
+            </a>
+        </div>
+
+        <div class="category">
+            <a href="http://dxe-design.com/tapshow/docs#getting-started" class="title">
+                Getting Started
+            </a>
+            <div class="sub-category">
+                <a href="#introduction">
+                    <p>Introduction</p>
+                </a>
+
+                <a href="#installation">
+                    <p>Installation</p>
+                </a>
+
+                <a href="#license">
+                    <p>License</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="category">
+            <a href="http://dxe-design.com/tapshow/docs#api" class="title active">
+                API
+            </a>
+            <div class="sub-category">
+                <a href="#options">
+                    <p>Options</p>
+                </a>
+
+                <a href="#events">
+                    <p>Events</p>
+                </a>
+
+                <a href="#styling">
+                    <p>Styling</p>
+                </a>
+
+                <a href="#methods">
+                    <p>Methods</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="category">
+            <a href="http://dxe-design.com/tapshow/docs#support" class="title">
+                Support
+            </a>
+            <div class="sub-category">
+                <a href="#contributing">
+                    <p>Contributing</p>
+                </a>
+
+                <a href="#changelog">
+                    <p>Changelog</p>
+                </a>
+
+                <a href="#contact">
+                    <p>Contact</p>
+                </a>
+
+                <a href="#report-bug">
+                    <p>Report Bug</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>

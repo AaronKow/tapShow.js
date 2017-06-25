@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tapShow.js - documentation</title>
+    <meta name="description" content='tapShow.js Documentation - Getting Started'>
+    <meta name="keywords" content="tapShow, tapshowjs, modularize information, boxes, blocks, javascipt, expand, collapse, documentation">
+
+    <!-- Open Graph Markup -->
+    <meta property="og:site_name" content="tapShow.js Documentation">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="tapShow.js Documentation">
+    <meta property="og:description" content='tapShow.js Documentation - Getting Started'>
+    <meta property="og:url" content="http://dxe-design.com/tapshow/docs">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
+    <link rel="stylesheet" href="../css/docs.css" />
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-101643243-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content" id="getting-started">
+            <a href="https://github.com/DxEDesign/tapShow.js">
+              <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+            </a>
+
+            <div class="section">
+                <h1 class="title">
+                    Getting Started
+                </h1>
+
+
+
+                <h2 class="section-title" id="introduction">
+                    Introduction
+                </h2>
+                <hr class="line1" />
+                <p class="paragraph">
+                    So ... What is tapShow.js? tapShow.js is a JavaScript plugin that allows a user to click / (tap) the box, then it will expand and show the full details about that particular block. This plugin is very handy for those who want to
+                    <strong>"modularize their information into blocks"</strong>.
+                </p>
+                <div class="spacer-20"></div>
+
+
+
+                <h3 class="sub-title">
+                    Compability
+                </h3>
+                <p class="paragraph">
+                    tapShow.js container and blocks layout are developed using CSS3 Flexbox. Thus, tapShow.js has no issue support mostly all modern browser today (eg: Chrome, Firefox, Edge, Safari). However, if you are unsure of what version of browser you're using, you
+                    can check the site <a href="https://caniuse.com/#search=flexbox" target="_blank">here</a>, it provides the full list of browser supporting flexbox.
+                </p>
+                <div class="spacer-20"></div>
+
+
+
+                <h3 class="sub-title">
+                    Structure
+                </h3>
+                <p class="paragraph">
+                    The structure of tapShow.js consists of <strong>Container</strong>, <strong>Block(s)</strong>, <strong>Outer-Content</strong> and <strong>Inner-Content</strong>:
+                </p>
+                <div class="img-structure">
+                    <img src="../img/structure_tapshow_js.png" alt="Structure of tapShow.js" />
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <strong>Container</strong>: is the home layout that holds all block(s) together. It is built with CSS3 flexbox. Thus it can give flexible arrangement to the block(s) that reside within.
+                        </li>
+                        <li>
+                            <strong>Block(s)</strong>: a box that holds two side of information. First side is called Outer-Content and the other, Inner-Content.
+                        </li>
+                        <li>
+                            <strong>Outer-Content</strong>: first side of information that visible to users initially. It will disappear, once user tap/click it. In order to make it visible again, it needs to wait till user close the box.
+                        </li>
+                        <li>
+                            <strong>Inner-Content</strong>: second side of information that invisible to users initially. It will appear when user tap/click the box that it resides.
+                        </li>
+                    </ul>
+                </div>
+                <div class="spacer-40"></div>
+
+
+
+                <h3 class="section-title" id="installation">
+                    Installation
+                </h3>
+                <hr class="line1" />
+                <p class="paragraph">
+                    tapShow.js is independent from other plugins. You just need to include the javascript file into your project:
+                </p>
+                <div class="code-block">
+                    <pre>
+                      <code class="HTML">
+    &lt;script type="text/javascript" src="tapShow.js"&gt;&lt;/script&gt;
+                      </code>
+                  </pre>
+                </div>
+                <p class="paragraph">
+                    Optionally, you can install tapShow.js with npm, bower, or yarn if you prefer:
+                </p>
+                <div class="code-block">
+                    <pre>
+                      <code class="Bash">
+# npm
+$ npm install tapshow.js
+
+# bower
+$ bower install tapshow.js
+
+# with yarn
+$ yarn install tapshow.js
+                      </code>
+                  </pre>
+                </div>
+                <div class="spacer-20"></div>
+
+
+
+                <h3 class="sub-title">
+                    Set HTML
+                </h3>
+                <p class="paragraph">
+                    The markup for tapShow.js is very simple. You can include the default class for getting started. The markup as below:
+                </p>
+                <div class="code-block">
+                    <pre>
+                      <code class="HTML">
+
+    &lt;div class="tpContainer"&gt;
+        &lt;div class="block"&gt;
+            &lt;div class="outer-content"&gt;
+                &lt;p&gt;
+                    Outer Content will appear initially. This will disappear when you tap it.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="inner-content"&gt;
+                &lt;p&gt;
+                    Your inner content here! This will appear when you tap the block.
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+                      </code>
+                  </pre>
+                </div>
+                <div class="spacer-20"></div>
+
+
+
+                <h3 class="sub-title">
+                    Init the plugin
+                </h3>
+                <div class="code-block">
+                    <pre>
+                      <code class="JavaScript">
+
+    tapShow({
+        target: '.tpContainer'
+    });
+
+                      </code>
+                  </pre>
+                </div>
+                <p class="paragraph">
+                    That's it! Then the above method will give you the default layout of tapShow.js block.
+                </p>
+                <div class="spacer-20"></div>
+
+
+
+                <h2 class="section-title" id="license">
+                    License
+                </h2>
+                <hr class="line1" />
+                <p class="paragraph">
+                    The License for tapShow.js is under (MIT License):
+                    <br><br>
+                    <span style="font-size: 15px;">
+                        Copyright (c) 2017 DxE Design
+                        <br><br>
+                        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+                        <br><br>
+                        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                        <br><br>
+                        THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                    </span>
+                </p>
+                <div class="spacer-60"></div>
+
+
+
+
+                <div class="button-navigation">
+                    <div class="next">
+                        <p class="title">
+                            Next page: API
+                        </p>
+                        <a href="http://dxe-design.com/tapshow/docs/api" class="btn-sign">
+                            Next &gt;
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="spacer-60"></div>
+            <div class="spacer-20"></div>
+
+
+            <footer class="footer">
+                <p>
+                    Built with &hearts; by <a href="https://github.com/dxedesign" target="_blank">DxE Design</a>
+                </p>
+            </footer>
+        </div>
+
+
+    </div>
+
+    <div class="sidebar">
+        <div class="logo-block">
+            <a href="http://dxe-design.com/tapshow">
+                tapShow.js
+            </a>
+        </div>
+
+        <div class="category">
+            <a href="http://dxe-design.com/tapshow/docs#getting-started" class="title active">
+                Getting Started
+            </a>
+            <div class="sub-category">
+                <a href="#introduction">
+                    <p>Introduction</p>
+                </a>
+
+                <a href="#installation">
+                    <p>Installation</p>
+                </a>
+
+                <a href="#license">
+                    <p>License</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="category">
+            <a href="http://dxe-design.com/tapshow/docs#api" class="title">
+                API
+            </a>
+            <div class="sub-category">
+                <a href="#options">
+                    <p>Options</p>
+                </a>
+
+                <a href="#events">
+                    <p>Events</p>
+                </a>
+
+                <a href="#styling">
+                    <p>Styling</p>
+                </a>
+
+                <a href="#methods">
+                    <p>Methods</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="category">
+            <a href="http://dxe-design.com/tapshow/docs#support" class="title">
+                Support
+            </a>
+            <div class="sub-category">
+                <a href="#contributing">
+                    <p>Contributing</p>
+                </a>
+
+                <a href="#changelog">
+                    <p>Changelog</p>
+                </a>
+
+                <a href="#contact">
+                    <p>Contact</p>
+                </a>
+
+                <a href="#report-bug">
+                    <p>Report Bug</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript">
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>

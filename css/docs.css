@@ -1,0 +1,303 @@
+/**
+ *
+ * [tapShow.js Documentation Stylesheet CSS]
+ * Version: 1.0.0
+ * Author: DxE-Design
+ * Website: http://dxe-design.com
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Athiti');
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    line-height: 1;
+}
+
+.spacer-20 {
+    height: 20px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-40 {
+    height: 40px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-60 {
+    height: 60px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-120 {
+    height: 120px;
+    width: 100%;
+    clear: both;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 220px;
+    right: 0;
+    width: calc(100% - 220px);
+    height: 100%;
+    overflow-x: hidden;
+    /*-webkit-transition: all .5s cubic-bezier(.694, .0482, .335, 1);
+            transition: all .5s cubic-bezier(.694, .0482, .335, 1);*/
+}
+
+.hide-sidebar > .wrapper {
+    width: 100%;
+    padding-right: 0;
+    -webkit-transform: translate3d(-220px, 0, 0);
+            transform: translate3d(-220px, 0, 0);
+}
+
+.hide-sidebar > .sidebar {
+    -webkit-transform: translate3d(-220px, 0, 0);
+            transform: translate3d(-220px, 0, 0);
+}
+
+hr.line1 {
+    opacity: .4;
+}
+
+/*----------------------------------------------*\
+  # Sidebar
+\*----------------------------------------------*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*background: #33bbff;*/
+    background: linear-gradient(to bottom right, #99ddff 0%, #1ab2ff 100%);
+    height: 100%;
+    width: 220px;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+            box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+    overflow-x: hidden;
+    /*-webkit-transition: all .5s cubic-bezier(.694, .0482, .335, 1);
+            transition: all .5s cubic-bezier(.694, .0482, .335, 1);*/
+    z-index: 5;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.sidebar > .logo-block {
+    margin: 54px 0 70px 0;
+    text-align: center;
+}
+
+.sidebar > .logo-block > a {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+.sidebar > .category {
+    font-family: 'Prompt', sans-serif;
+    text-align: right;
+    padding: 7px 14px 7px 0;
+    margin: 44px 29px 0 0;
+    border-radius: 7px;
+    border-right: 3px solid rgba(255,255,255,.5);
+}
+
+.sidebar > .category a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar > .category > .sub-category > a:hover {
+    color: #cceeff;
+}
+
+.sidebar > .category > a.title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sidebar > .category > a.title.active {
+    border-bottom: 2px solid rgba(255,255,255,.4);
+}
+
+.sidebar > .category > .sub-category {
+
+}
+
+.sidebar > .category > .sub-category > a {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.sidebar > .category > .sub-category p {
+    margin: 17px 0 0 0;
+}
+
+/*----------------------------------------------*\
+  # Content & Sectons
+\*----------------------------------------------*/
+.content {
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.section {
+    position: relative;
+    width: 70%;
+    margin: 0 auto 0 10%;
+}
+
+.section > .title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.section > .section-title,
+.section > .sub-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 32px;
+}
+
+.section > .sub-title.highlight {
+    border-left: 8px solid #33bbff;
+    padding: 10px 13px;
+}
+
+.section > .section-title {
+    font-size: 27px;
+}
+
+.section > .paragraph,
+.section > .list {
+    font-family: 'Athiti', sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.section > .paragraph > a {
+    color: #33bbff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.section > .paragraph.coding {
+    line-height: 37px;
+    margin: -9px 0 0 0;
+}
+
+.section > .paragraph.coding > .snippet {
+    background: #f7f7f7;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 1px 5px;
+    border: 1px solid #bfbfbf;
+    border-radius: 6px;
+}
+
+.section > .img-structure {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section > .img-structure > img {
+    display: block;
+    margin: 0 auto;
+    width: 78%;
+}
+
+.section > .code-block {
+    font-size: 13px;
+}
+
+
+/*----------------------------------------------*\
+  # Button Navigation (bottom)
+\*----------------------------------------------*/
+.button-navigation > .prev,
+.button-navigation > .next {
+    display: inline-block;
+}
+
+.button-navigation > .prev {
+  float: left;
+}
+
+.button-navigation > .next {
+    float: right;
+}
+
+.button-navigation .title {
+    margin-bottom: 27px;
+    color: rgba(0,0,0, .4);
+}
+
+.button-navigation > .prev > .title {
+    text-align: left;
+}
+
+.button-navigation > .next > .title {
+    text-align: right;
+}
+
+.button-navigation .btn-sign {
+    text-decoration: none;
+    color: #fff;
+    background: #33bbff;
+        padding: 9px 27px;
+}
+
+.button-navigation .btn-sign:hover {
+    background: #fff;
+    color: #33bbff;
+    border: 3px solid #33bbff;
+}
+
+/*----------------------------------------------*\
+  # Footer
+\*----------------------------------------------*/
+.footer {
+    position: relative;
+    height: 8%;
+    overflow: hidden;
+    background: #33bbff;
+    -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+}
+
+.footer > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    transform: translate(-50%, -50%);
+}
+
+.footer > p > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}

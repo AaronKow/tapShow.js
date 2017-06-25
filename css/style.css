@@ -1,0 +1,842 @@
+/**
+ *
+ * [tapShow.js Stylesheet CSS]
+ * Version: 1.0.0
+ * Author: DxE-Design
+ * Website: http://dxe-design.com
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, html {
+    height: 100%;
+    line-height: 1;
+}
+
+h1, h2, h3, p {
+    font-family: 'Prompt', sans-serif;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(0, 136, 204, 0.3);
+    margin: 1em 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.spacer-20 {
+    height: 20px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-40 {
+    height: 40px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-60 {
+    height: 60px;
+    width: 100%;
+    clear: both;
+}
+
+.spacer-120 {
+    height: 120px;
+    width: 100%;
+    clear: both;
+}
+
+/* Navigation */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1003;
+    text-align: center;
+    /*background: #33bbff;*/
+    /*box-shadow: 18px 12px 9px rgba(0, 136, 204, .1);*/
+}
+
+.navbar > .title {
+    font-family: 'Pacifico', cursive;
+    display: block;
+    float: inherit;
+    color: #fff;
+    margin-left: 0;
+    font-size: 24px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: auto;
+}
+
+.navbar > .navigation {
+    float: inherit;
+    margin-top: 20px;
+}
+
+.navbar > .navigation a {
+    font-family: 'Prompt', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 0 7px;
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+}
+
+.navbar > .navigation a:hover {
+    color: #cce6ff;
+}
+
+.github-ribbon {
+    display: none;
+    position: relative;
+    z-index: 1004;
+}
+
+
+/* Section */
+.section1 {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    /*background: #33bbff;*/
+    background: linear-gradient(to bottom right, #99ddff 0%, #1ab2ff 100%);
+    /*border-bottom: 2px solid #00aaff;*/
+    -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+            box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+}
+
+.section1 > .content1 {
+    position: relative;
+    top: 60%;
+    height: auto;
+    text-align: center;
+}
+
+.section1 > .content1 > h1 {
+    position: relative;
+    display: block;
+    /*top: 65%;
+    left: 50%;*/
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    font-size: 37px;
+    width: 270px;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 100;
+    margin: 0 auto;
+    /*-webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);*/
+}
+
+.section1 > .content1 > h1:first-child {
+    display: none;
+}
+
+.section1 > .content1 > h1 > small {
+    color: rgba(255, 255, 255, .7);
+    font-size: 30px;
+}
+
+.section1 > .content1 .content1-buttons {
+    display: block;
+    margin: 21px 0 0 12px;
+}
+
+.section1 > .content1 .content1-buttons > .btn1,
+.section1 > .content1 .content1-buttons > .btn2 {
+    font-family: 'Prompt', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 2px 16px;
+    margin: 0 20px 0 0;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 6px 8px 18px rgba(0, 0, 0, .1);
+    transition: all .5s ease;
+}
+
+.section1 > .content1 .content1-buttons > .btn1 {
+    color: #33bbff;
+    background: #fff;
+}
+
+.section1 > .content1 .content1-buttons > .btn1:hover,
+.section1 > .content1 .content1-buttons > .btn2:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, .9);
+}
+
+.section1 > .content2 {
+    position: absolute;
+    top: 43%;
+    right: 50%;
+    width: 270px;
+    height: 163px;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+}
+
+.section1 > .content2 > .box-obj {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    width: 45%;
+    height: 67%;
+    border: 13px solid #fff;
+    border-radius: 41px;
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, .1);
+    transition: all .5s ease;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-animation: extendBox 3s 1s linear infinite both;
+            animation: extendBox 3s 1s linear infinite both;
+}
+
+.section1 > .content2 > .box-obj:hover {
+    box-shadow: 0 0 80px rgba(255, 255, 255, .9);
+}
+
+.box-obj > .bar {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 2px;
+    height: 3px;
+    margin: 0 auto;
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, .1);
+    -webkit-transition: all .35s cubic-bezier(.694, .0482, .335, 1);
+            transition: all .35s cubic-bezier(.694, .0482, .335, 1);
+}
+
+.box-obj > .bar:nth-child(odd) {
+    width: 60%;
+}
+
+.box-obj > .bar:nth-child(even) {
+    width: 70%;
+}
+
+.content2 .icon-hand {
+    position: absolute;
+    opacity: 1;
+    top: 54%;
+    left: 50%;
+    color: #fff;
+    font-size: 90px;
+    -webkit-animation: handAppear 3s .8s linear infinite both;
+            animation: handAppear 3s .8s linear infinite both;
+}
+
+.box-obj > .bar:first-child {
+    top: 0;
+    /*margin-top: 35px;*/
+    margin-top: 20px;
+}
+
+.box-obj > .bar:nth-last-child(1),
+.box-obj > .bar:nth-last-child(2),
+.box-obj > .bar:nth-last-child(3),
+.box-obj > .bar:nth-last-child(4) {
+    opacity: 0;
+    bottom: 0;
+    -webkit-animation: showMore 3s 1s linear infinite both;
+            animation: showMore 3s 1s linear infinite both;
+}
+
+.box-obj > .bar + .bar {
+    margin-top: 8px;
+}
+
+.section1 i.scrollTo {
+  position: absolute;
+  cursor: pointer;
+  /*top: 72%;*/
+  top: 93%;
+  left: 50%;
+  color: #fff;
+  /*font-size: 35px;*/
+  font-size: 25px;
+  -webkit-animation: moveUp 1s ease infinite alternate;
+            animation: moveUp 1s ease infinite alternate;
+}
+
+.section2 {
+    height: auto;
+    padding: 80px 0;
+    background: transparent;
+}
+
+.section2 > .content {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section2 > .content > p {
+    line-height: 2.5;
+}
+
+.section2 h1 {
+    color: #111;
+}
+
+.section2 h2 {
+    color: rgba(17, 17, 17, .7);
+    margin-left: 20px;
+}
+
+.section2 h3 {
+    color: rgba(17, 17, 17, .7);
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+/*.section2 > .content > .btn-code {
+    margin-left: 20px;
+}
+
+.btn-code {
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    border: 1px solid #111;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100px;
+    padding: 7px 1px;
+    background: #f2f2f2;
+    text-align: center;
+    -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+}
+
+.btn-code:hover {
+    transform: translateY(-5px);
+}*/
+
+.footer {
+    position: relative;
+    height: 10%;
+    overflow: hidden;
+    background: #33bbff;
+    -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 90px rgba(0, 0, 0, .3);
+}
+
+.footer > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    color: #fff;
+    /*font-size: 13px;*/
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.footer > p > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.control-panel {
+  display: flex;
+  flex-basis: 100%;
+  margin: 20px 0 0 25px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.btn-control {
+    display: inline-block;
+    font-family: 'Prompt', sans-serif;
+    cursor: pointer;
+    border: 1px solid #111;
+    border-radius: 2px;
+    font-size: 14px;
+    width: auto;
+    padding: 7px 10px;
+    background: #f2f2f2;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+}
+
+.btn-control:hover {
+    background: #d9d9d9;
+}
+
+/* Animation */
+@keyframes moveUp {
+    from {
+      transform: translate(-50%, 0);
+    }
+    to {
+      transform: translate(-50%, -20px);
+    }
+}
+
+@keyframes showMore {
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes handAppear {
+    0% { opacity: 0; transform: scale(1)}
+    2% { opacity: 1; transform: scale(0.8)}
+    4% { opacity: 1; transform: scale(1)}
+    20% { opacity: 0; transform: scale(1)}
+    100% { opacity: 0; transform: scale(1)}
+}
+
+@keyframes extendBox {
+    0% { width: 45%; height: 67%; }
+    15% { width: 100%; height: 100%; }
+    30% { width: 100%; height: 100%; }
+    45% { width: 45%; height: 67%; }
+    100% { width: 45%; height: 67%; }
+}
+
+code .highlight0 {
+    background: #cce6ff;
+}
+
+code .highlight1 {
+    background: #ccffcc;
+}
+
+
+/*----------------------------------------------*\
+  # Responsive Design
+\*----------------------------------------------*/
+@media (min-device-width: 480px) and (orientation: landscape) {
+    /* Section */
+    .section1 {
+        min-height: 550px;
+    }
+
+    .github-ribbon {
+        display: block;
+    }
+
+    .section1 i.scrollTo {
+        top: 92%;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Section */
+    .section1 {
+        min-height: 100%;
+    }
+
+    .section1 > .content1 {
+        text-align: left;
+        top: 42%;
+        left: 12%;
+    }
+
+    .section1 > .content1 > h1 {
+        /*top: 49%;
+        left: 28%;*/
+        text-align: left;
+        font-size: 40px;
+        width: 313px;
+    }
+
+    .section1 > .content1 > h1:first-child {
+        display: block;
+        margin: 0;
+    }
+
+    .section1 > .content1 > h1:nth-child(2) {
+        display: none;
+    }
+
+    .section1 > .content1 > h1 > small {
+        font-size: 24px;
+    }
+
+    .section1>.content2 {
+        top: 54%;
+        right: 27%;
+        width: 345px;
+        height: 230px;
+    }
+
+    .section1>.content2>.box-obj {
+        top: 54%;
+        border: 18px solid #fff;
+        border-radius: 52px;
+    }
+
+    .section1 > .content1 .content1-buttons {
+        margin: 36px 0 0 0px;
+    }
+
+    .section1 > .content1 .content1-buttons > .btn1,
+    .section1 > .content1 .content1-buttons > .btn2 {
+        font-size: 19px;
+        margin: 0 20px 0 0;
+        border: 4px solid #fff;
+        border-radius: 17px;
+    }
+
+    .box-obj>.bar {
+        height: 4px;
+    }
+
+    .box-obj>.bar+.bar {
+        margin-top: 12px;
+    }
+
+    .box-obj>.bar:first-child {
+        margin-top: 27px;
+    }
+
+    .content2 .icon-hand {
+        top: 72%;
+        font-size: 110px;
+    }
+
+    .section1 i.scrollTo {
+        top: 93%;
+        font-size: 40px;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 61px;
+    }
+
+    .navbar > .navigation {
+        float: right;
+        margin-right: 144px;
+    }
+
+    .navbar > .title {
+        float: left;
+        margin-left: 91px;
+    }
+
+    /* Footer */
+    .footer > p {
+      font-size: 13px;
+    }
+}
+
+@media (min-width: 992px)  {
+    /* Section */
+    .section1 {
+        min-height: 100%;
+    }
+
+    .section1 > .content1 > h1 {
+        /*top: 50%;
+        left: 28%;*/
+        text-align: left;
+        font-size: 47px;
+        width: 328px;
+    }
+
+    .section1 > .content1 > h1 > small {
+        font-size: 31px;
+    }
+
+    .section1>.content2 {
+        top: 55%;
+        right: 27%;
+        width: 382px;
+        height: 263px;
+    }
+
+    .box-obj>.bar+.bar {
+        margin-top: 16px;
+    }
+
+    .section1 i.scrollTo {
+        top: 89%;
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar > .title {
+        margin-left: 144px;
+    }
+
+    .section1>.content2 {
+        top: 54%;
+        width: 482px;
+        height: 322px;
+    }
+
+    .section1>.content2>.box-obj {
+        border-radius: 76px;
+        border: 24px solid #fff;
+    }
+
+    .box-obj>.bar {
+        height: 5px;
+        border-radius: 10px;
+    }
+
+    .box-obj>.bar:first-child {
+        margin-top: 36px;
+    }
+
+    .box-obj>.bar+.bar {
+        margin-top: 18px;
+    }
+
+    .content2 .icon-hand {
+        font-size: 170px;
+    }
+
+    /* Navbar */
+    .navbar > .title {
+        margin-top: 12px;
+        font-size: 28px;
+    }
+
+    .navbar > .navigation a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section1 > .content1 {
+        top: 40%;
+    }
+
+    .section1 > .content1 > h1 {
+        font-size: 56px;
+        width: 547px;
+    }
+
+    .section1 > .content1 > h1 > small {
+        font-size: 32px;
+    }
+
+    .section1 i.scrollTo {
+        top: 93%;
+        font-size: 35px;
+    }
+
+    .section1 > .content1 .content1-buttons > .btn1,
+    .section1 > .content1 .content1-buttons > .btn2 {
+        font-size: 25px;
+        margin: 0 20px 0 0;
+        border: 5px solid #fff;
+        border-radius: 21px;
+    }
+}
+
+@media (min-width: 1530px) {
+    .section1 > .content1 > h1 {
+        /*top: 44%;*/
+    }
+
+    .section1>.content2 {
+        top: 53%;
+        width: 662px;
+        height: 405px;
+    }
+
+    .section1>.content2>.box-obj {
+        top: 50%;
+        border-radius: 90px;
+        border: 27px solid #fff;
+    }
+
+    .box-obj>.bar {
+        height: 8px;
+        border-radius: 8px;
+    }
+
+    .box-obj>.bar:first-child {
+        margin-top: 58px;
+    }
+
+    .box-obj>.bar+.bar {
+        margin-top: 18px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .section1>.content2 {
+        top: 51%;
+        right: 27%;
+        width: 860px;
+        height: 532px;
+    }
+
+    .section1>.content2>.box-obj {
+        border: 30px solid #fff;
+        border-radius: 111px;
+    }
+
+
+    .section1 > .content1 > h1 {
+        /*top: 47%;
+        left: 30%;*/
+        font-size: 70px;
+        width: 730px;
+    }
+
+    .section1 > .content1 > h1 > small {
+        font-size: 35px;
+    }
+
+    .box-obj>.bar {
+        height: 13px;
+    }
+
+    .box-obj>.bar+.bar {
+        margin-top: 27px;
+    }
+
+    .box-obj>.bar:first-child {
+        margin-top: 54px;
+    }
+
+    .content2 .icon-hand {
+        top: 67%;
+        font-size: 271px;
+    }
+
+    .section1 i.scrollTo {
+        top: 92%;
+        font-size: 35px;
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width : 1024px)
+and (orientation: portrait) {
+    /* Section */
+    .section1 > .content1 {
+        top: 62%;
+        left: 0;
+        text-align: center;
+    }
+
+    .section1 > .content2 {
+        top: 43%;
+        right: 50%;
+        width: 650px;
+        height: 363px;
+    }
+
+    .section1 > .content2 > .box-obj {
+        top: 42%;
+        width: 45%;
+        height: 67%;
+        border: 27px solid #fff;
+        border-radius: 87px;
+    }
+
+    .box-obj > .bar:first-child {
+        margin-top: 44px;
+    }
+
+    .box-obj > .bar + .bar {
+        margin-top: 18px;
+        border-radius: 10px;
+    }
+
+    .box-obj > .bar {
+        height: 7px;
+    }
+
+    .section1 > .content1 > h1 {
+        /*top: 68%;
+        left: 50%;*/
+        font-size: 74px;
+        width: 560px;
+            text-align: center;
+    }
+
+    .section1 > .content1 > h1:first-child {
+        display: none;
+    }
+
+    .section1 > .content1 > h1:nth-child(2) {
+        display: block;
+    }
+
+    .section1 > .content1 > h1 > small {
+        color: rgba(255, 255, 255, .9);
+        font-size: 56px;
+    }
+
+    .content2 .icon-hand {
+        top: 65%;
+        left: 55%;
+        font-size: 140px;
+    }
+
+    .section1 > .content1 .content1-buttons {
+        margin: 40px 0 0 29px;
+    }
+
+    .section1 > .content1 .content1-buttons > .btn1,
+    .section1 > .content1 .content1-buttons > .btn2 {
+        font-size: 28px;
+        margin: 0 31px 0 0;
+        border-radius: 19px;
+        border: 6px solid #fff;
+    }
+
+    /* Navigation */
+    .navbar {
+        height: 115px;
+    }
+
+    .navbar > .title {
+        float: inherit;
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .navbar > .navigation {
+        margin-top: 28px;
+        float: inherit;
+        margin-right: 0;
+    }
+
+    .navbar > .navigation a {
+        font-size: 17px;
+    }
+
+    .github-ribbon {
+        display: block;
+    }
+}

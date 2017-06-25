@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tapShow.js - a simple tap and show the content within</title>
+    <meta name="description" content='tapShow.js is a javascript plugin that allows a user to click / (tap) the box, then it will expand and show the full details about that particular block. This plugin is very handy for those who want to "modularize their information into blocks"'>
+    <meta name="keywords" content="tapShow, tapshowjs, modularize information, boxes, blocks, javascipt, expand, collapse">
+
+    <!-- Open Graph Markup -->
+    <meta property="og:site_name" content="tapShow.js">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="tapShow.js - a simple tap and show the content within">
+    <meta property="og:description" content='tapShow.js is a javascript plugin that allows a user to click / (tap) the box, then it will expand and show the full details about that particular block. This plugin is very handy for those who want to "modularize their information into blocks"'>
+    <meta property="og:url" content="http://dxe-design.com/tapshow">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-cave-light.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-101643243-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="https://github.com/DxEDesign/tapShow.js" class="github-ribbon">
+          <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+        </a>
+
+        <nav class="navbar">
+            <a href="http://dxe-design.com/tapshow" class="title">
+                <span>tapShow.js</span>
+            </a>
+
+            <div class="navigation">
+                <a href="http://dxe-design.com/tapshow" class="title">
+                    <span>Demo</span>
+                </a>
+
+                <a href="http://dxe-design.com/tapshow/docs" class="title">
+                    <span>Documentation</span>
+                </a>
+
+                <a href="#" class="title">
+                    <span>Download</span>
+                </a>
+
+                <a href="http://dxe-design.com/tapshow/docs/support" class="title">
+                    <span>Support</span>
+                </a>
+            </div>
+        </nav>
+
+        <section class="section1">
+            <div class="content1">
+                <h1>
+                    <span style="text-shadow: 4px 5px rgba(0,0,0,.1)">tapShow.js</span>
+                    <br>
+                    <small>a simple tap and show the content within. </small>
+                </h1>
+
+                <h1>
+                    <small>a simple tap and show the content within. </small>
+                </h1>
+
+                <div class="content1-buttons">
+                    <a href="#" class="btn1">
+                        Download
+                    </a>
+
+                    <a href="https://github.com/DxEDesign/tapShow.js" class="btn2">
+                        Github
+                    </a>
+                </div>
+            </div>
+
+            <div class="content2">
+                <div class="box-obj">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <i class="icon-hand fa fa-hand-pointer-o"></i>
+            </div>
+            <a href="#intro">
+              <i class="scrollTo fa fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section class="section2" id="intro">
+            <div class="content">
+                <h1>Introduction</h1>
+                <hr>
+                <p>
+                    tapShow.js is a javascipt plugin that allows a user to click / (tap) the box, then it will expand and show the full details about that particular block. This plugin is very handy for those who want to <i>"modularize their information into blocks"</i>.
+                </p>
+                <div class="spacer-40"></div>
+                <h1>Demo</h1>
+                <hr>
+                <div class="spacer-20"></div>
+
+                <h2>Simple Example (default styling)</h2>
+                <div class="btn-code example1">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In HTML:
+                            </p>
+                            <pre>
+                                <code class="HTML">
+&lt;div class="<span class="highlight1">tapShow example1</span>"&gt;
+    &lt;div class="<span class="highlight1">block</span>"&gt;
+        &lt;div class="<span class="highlight1">outer-content</span>"&gt;
+            &lt;p&gt;
+                Simple Example
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;strong&gt;Click me for more info&lt;/strong&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="<span class="highlight1">inner-content</span>"&gt;
+            &lt;p&gt;
+                This is a Simple Example!
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+  target: '.tapShow.example1'
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example1">
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Simple Example
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-60"></div>
+
+
+
+
+                <h2>Multiple Blocks</h2>
+                <div class="btn-code example2">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In HTML:
+                            </p>
+                            <pre>
+                                <code class="HTML">
+&lt;div class="<span class="highlight1">tapShow example2</span>"&gt;
+    &lt;div class="<span class="highlight1">block</span>"&gt;
+        &lt;div class="<span class="highlight1">outer-content</span>"&gt;
+            &lt;p&gt;
+                Block 1
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;strong&gt;Click me for more info&lt;/strong&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="<span class="highlight1">inner-content</span>"&gt;
+            &lt;p&gt;
+                This is a Simple Example!
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="<span class="highlight1">block</span>"&gt;
+        &lt;div class="<span class="highlight1">outer-content</span>"&gt;
+            &lt;p&gt;
+                Block 2
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;strong&gt;Click me for more info&lt;/strong&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="<span class="highlight1">inner-content</span>"&gt;
+            &lt;p&gt;
+                This is a Simple Example!
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="<span class="highlight1">block</span>"&gt;
+        &lt;div class="<span class="highlight1">outer-content</span>"&gt;
+            &lt;p&gt;
+                Block 3
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;strong&gt;Click me for more info&lt;/strong&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class="<span class="highlight1">inner-content</span>"&gt;
+            &lt;p&gt;
+                This is a Simple Example!
+            &lt;/p&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+  target: '.tapShow.example2'
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example2">
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 1
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 2
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 3
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="spacer-60"></div>
+
+
+
+                <h2>Show One at a Time</h2>
+                <div class="btn-code example3">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+  target: '.tapShow.example3',
+  <span class="highlight1">displayOne: true</span>
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example3">
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 1
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 2
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 3
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 4
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 5
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 6
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 7
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="spacer-60"></div>
+
+
+                <h2>Controls for Blocks</h2>
+                <div class="btn-code example4">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                Set variable initially:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+var tapShow = tapShow({
+  target: '.tapShow.example4'
+});
+                                </code>
+                            </pre>
+
+                            <p>
+                                Add a new block:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.addBlock({
+  outerContent: "&lt;p&gt;New Block&lt;/p&gt;",
+  innerContent: "&lt;p&gt;I am a new Block!&lt;/p&gt;&lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit ... &lt;/p&gt;"
+});
+                                </code>
+                            </pre>
+
+                            <p>
+                                Remove a block:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.removeBlock();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Expand all blocks:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.expandBlock();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Collapse all blocks:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.collapseBlock();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Build all blocks:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.build();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Destroy all blocks:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.destroy();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Rebuild all blocks:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.rebuild();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Align block to left:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.alignLeft();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Align block to center:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.alignCenter();
+                                </code>
+                            </pre>
+
+                            <p>
+                                Align block to right:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow.alignRight();
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-panel">
+                    <div class="btn-control addBlock">
+                        <div>Add Block</div>
+                    </div>
+                    <div class="btn-control removeBlock">
+                        <div>Remove Block</div>
+                    </div>
+                    <div class="btn-control expandBlock">
+                        <div>Expand All</div>
+                    </div>
+                    <div class="btn-control collapseBlock">
+                        <div>Collapes All</div>
+                    </div>
+                    <div class="btn-control build">
+                        <div>Build</div>
+                    </div>
+                    <div class="btn-control destroy">
+                        <div>Destroy</div>
+                    </div>
+                    <div class="btn-control rebuild">
+                        <div>Rebuild</div>
+                    </div>
+                    <div class="btn-control alignLeft">
+                        <div>Align Left</div>
+                    </div>
+                    <div class="btn-control alignCenter">
+                        <div>Align Center</div>
+                    </div>
+                    <div class="btn-control alignRight">
+                        <div>Align Right</div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example4">
+
+                    <div class="block test1">
+                        <div class="outer-content">
+                            <p>
+                                Block 1
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block test1">
+                        <div class="outer-content">
+                            <p>
+                                Block 2
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Block 3
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="spacer-60"></div>
+
+
+                <h2>Event Callbacks <small>- (during content hide or show)</small></h2>
+                <div class="btn-code example5">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+    target: '.tapShow.example5',
+    showStart: function() {
+        alert("I'm going to show my content!")
+    },
+    showEnd: function() {
+        alert("My content have been shown!")
+    },
+    hideStart: function() {
+        alert("I'm going to hide my content!")
+    },
+    hideEnd: function() {
+        alert("My content have been hide!")
+    }
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example5">
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Event Block Type 1
+                            </p>
+                            <p>
+                                You can call event during the content is going to hide or during the content is shown.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-60"></div>
+
+
+
+                <h2>Event Callbacks <small>- (during blocks finish expanded or collapsed)</small></h2>
+                <div class="btn-code example6">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+    target: '.tapShow.example6',
+    blockExpand: function() {
+        alert("I'm Expanded!")
+    },
+    blockCollapse: function() {
+        alert("I'm Collapsed!")
+    }
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example6">
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Event Block Type 2
+                            </p>
+                            <p>
+                                You can also call event after the block is expanded or collapsed.
+                                <br>
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-60"></div>
+
+
+                <h2>Apply Styling to Blocks</h2>
+                <div class="btn-code example7">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+    target: '.tapShow.example7',
+    customCSS: {
+        '.block': 'color: #333;', // this will apply to all blocks
+        '.block-green': 'background: #99ffcc;',
+        '.block-red': 'background: #ff9999;',
+        '.block-yellow': 'background: #ffffb3;',
+        '.block-blue': 'background: #99ccff;'
+    }
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example7">
+                    <div class="block block-green">
+                        <div class="outer-content">
+                            <p>
+                                Block 1
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block block-red">
+                        <div class="outer-content">
+                            <p>
+                                Block 2
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block block-yellow">
+                        <div class="outer-content">
+                            <p>
+                                Block 3
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="block block-blue">
+                        <div class="outer-content">
+                            <p>
+                                Block 4
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                                <br>
+                                <br>
+                                <strong>Click me for more info</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                This is a Simple Example!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras ornare arcu dui vivamus arcu felis bibendum ut. Orci sagittis eu volutpat odio facilisis mauris. Eu nisl nunc mi ipsum faucibus.
+                                Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Parturient montes nascetur ridiculus mus. Donec massa sapien faucibus et molestie ac. Libero nunc consequat interdum varius sit amet mattis vulputate
+                                enim. Pulvinar etiam non quam lacus suspendisse faucibus. Sit amet massa vitae tortor. Magna sit amet purus gravida quis blandit turpis cursus. Feugiat in ante metus dictum at tempor. Sodales ut eu sem integer vitae justo
+                                eget magna. Risus nullam eget felis eget. Tristique risus nec feugiat in fermentum posuere. Neque sodales ut etiam sit amet nisl purus in mollis. Ullamcorper eget nulla facilisi etiam. Est placerat in egestas erat imperdiet
+                                sed euismod nisi. Laoreet non curabitur gravida arcu ac tortor. Tempus quam pellentesque nec nam aliquam sem et tortor. Suspendisse sed nisi lacus sed viverra. Fermentum posuere urna nec tincidunt praesent semper feugiat
+                                nibh. Diam sollicitudin tempor id eu. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ipsum consequat nisl vel pretium lectus. Nulla at volutpat diam ut venenatis tellus. Turpis nunc eget lorem dolor
+                                sed viverra ipsum nunc aliquet. Commodo odio aenean sed adipiscing diam. Justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices tincidunt arcu non sodales neque sodales
+                                ut etiam sit. Orci sagittis eu volutpat odio facilisis. Elit at imperdiet dui accumsan. Risus viverra adipiscing at in. Tempus egestas sed sed risus pretium. Odio tempor orci dapibus ultrices in iaculis nunc. Duis tristique
+                                sollicitudin nibh sit. Consectetur adipiscing elit pellentesque habitant morbi. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Aliquam vestibulum morbi blandit cursus risus at.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-60"></div>
+
+                <h2>Insert Pictures in Block</h2>
+                <p style="margin-left:20px;">
+                    (Quiz reference from ProProfs, Links: <a href="https://goo.gl/Z393ty" target="_blank">here</a>)
+                </p>
+                <div class="btn-code example8">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In HTML:
+                            </p>
+                            <div style="display: block">
+                            <pre>
+                                <code class="HTML">
+&lt;div class="tapShow example8"&gt;
+    &lt;div class="block"&gt;
+        &lt;div class="outer-content"&gt;
+            <span class="highlight1">&lt;img src="img/question-mark.jpg" style="width: 62px;" /&gt;</span>
+            &lt;p&gt;
+                I swing from tree to tree and i am very energetic. Who am i?
+                &lt;br&gt;&lt;br&gt;
+                &lt;strong&gt;Click me for answer!&lt;/strong&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="inner-content"&gt;
+            &lt;p&gt;
+                Answer: Monkey
+            &lt;/p&gt;
+            <span class="highlight1">&lt;img src="img/monkey.jpg" style="width: 100%;"/&gt;</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                          </div>
+
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+    target: '.tapShow.example8',
+    displayOne: true,
+    expandWidth: '55%',
+    blockWidth: 250,
+    blockHeight: 250,
+    customCSS: {
+        ".inner-content": "width: 100%;"
+    }
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example8">
+                    <div class="block">
+                        <div class="outer-content">
+                            <img src="img/question-mark.jpg" style="width: 62px;" />
+                            <p>
+                                I swing from tree to tree and i am very energetic. Who am i?
+                                <br><br>
+                                <strong>Click me for answer!</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                Answer: Monkey
+                            </p>
+                            <img src="img/monkey.jpg" style="width: 100%;" />
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <img src="img/question-mark.jpg" style="width: 62px;" />
+                            <p>
+                                I can come in any colour, and i really like going on walks and taking baths. Who am i?
+                                <br><br>
+                                <strong>Click me for answer!</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                Answer: Dog
+                            </p>
+                            <img src="img/dog.jpg" style="width: 100%;" />
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="outer-content">
+                            <img src="img/question-mark.jpg" style="width: 62px;" />
+                            <p>
+                                I hate taking baths because i lick myself instead, and i am free to wander all over the place. Who am i?
+                                <br><br>
+                                <strong>Click me for answer!</strong>
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <p>
+                                Answer: Cat
+                            </p>
+                            <img src="img/cat.jpg" style="width: 100%;" />
+                        </div>
+                    </div>
+
+                </div>
+                <div class="spacer-60"></div>
+
+
+                <h2>Showing Video in Block</h2>
+                <div class="btn-code example9">
+                    <div class="block">
+                        <div class="outer-content">
+                            Show Codes
+                        </div>
+
+                        <div class="inner-content" style="text-align:left;">
+                            <p>
+                                In HTML:
+                            </p>
+                            <div style="display: block">
+                            <pre>
+                                <code class="HTML">
+&lt;div class="tapShow example9"&gt;
+    &lt;div class="block"&gt;
+        &lt;div class="outer-content"&gt;
+            &lt;p&gt;
+                Click me for cat video!
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="inner-content"&gt;
+            <span class="highlight1">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/aLagODygcbs" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                          </div>
+
+                            <p>
+                                In Javascript:
+                            </p>
+                            <pre>
+                                <code class="JavaScript">
+tapShow({
+  target: '.tapShow.example9'
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-40"></div>
+                <!-- Example Here -->
+                <div class="tapShow example9">
+                    <div class="block">
+                        <div class="outer-content">
+                            <p>
+                                Click me for cat video!
+                            </p>
+                        </div>
+                        <div class="inner-content">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/aLagODygcbs" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer-60"></div>
+
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>
+                Built with &hearts; by <a href="https://github.com/dxedesign" target="_blank">DxE Design</a>
+            </p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./js/tapShow.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script> -->
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>
