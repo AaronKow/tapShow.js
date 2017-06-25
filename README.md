@@ -46,7 +46,7 @@ $ npm install tapshow.js
 $ bower install tapshow.js
 
 # with yarn
-$ yarn install tapshow.js
+$ yarn add tapshow.js
 ```
 
 #### Set HTML
